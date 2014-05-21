@@ -1,0 +1,630 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+.pic_upload {
+  position:relative;
+  width:600px;
+  margin-top:600px;
+
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.clearfix {
+  margin-left:80px;
+}
+
+/*profiles*/
+.first_block {
+  width: 98%;
+  margin-top:10px ;
+  margin-left:5px;
+  margin-right:5px;
+  height:220px;
+  padding-top:2px;
+  background-color: #f8fff5;
+  border:2px solid #63b063 ;
+  border-radius:25px;
+}
+
+.sec_block {
+  width: 98%;
+  margin-top:10px ;
+  margin-left:5px;
+  margin-right:5px;
+  height:600px;
+  padding-top:2px;
+  background-color: #f8fff5;
+  border:2px solid #63b063 ;
+  border-radius:25px;
+  margin-bottom:5px;
+}
+
+.profcaption {
+    font-family:Oswald, sans-serif;
+    width: 98%;
+    margin-top:10px ;
+    margin-left:5px;
+    margin-right:5px;
+    height:230px;
+    background-color: white;
+    border-top: solid 5px #63b063 ;
+    border-bottom: solid 5px #63b063 ;
+    border-radius:25px;
+
+
+}
+
+.profile_details {
+    margin-right: 13px;
+    font-size: 14px;
+    /*margin-left: 29px;*/
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight:bold;
+}
+
+
+.emp_profile_details {
+    margin-right: 13px;
+    font-size: 14px;
+    /*margin-left: 29px;*/
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight:bold;
+}
+
+.button_signin {
+  display: inline-block;
+  padding: 140px 15px;
+}
+.mainpage {
+  height: 150px;
+  margin-top: 47px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.sign-in {
+  width: 600px;
+  height: 600px;
+  max-width: 901px;
+  padding-right: 1px;
+  padding-left: 0px;
+  float: right;
+}
+.maintext {
+  font-family: Oswald, sans-serif;
+  font-size: 73px;
+  line-height: 26px;
+}
+
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border-radius: 0px;
+  background-image: url('../images/paper_1.png');
+}
+
+h1 {
+  height: 55px;
+  margin: 25px auto 25px 35px;*/
+  /*margin-left: auto;
+  margin-right: auto;*/
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: none;
+  opacity: 1;
+  font-family: Oswald, sans-serif;
+  color: #4a874a;
+  font-size: 51px;
+  line-height: 44px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -2px;
+  /*text-indent: 14px;*/
+  text-transform: none;
+  text-shadow: rgba(47, 56, 47, 0.79) 6px 6px 50px;
+}
+h2 {
+  margin-top: 15px;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+h3 {
+  min-width: 0px;
+  margin-top: 0px;
+  font-size: 31px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-left:50px;
+}
+
+h5 {
+  margin-top: 30px;
+  margin-right: 13px;
+  margin-left: 29px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.button {
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  width: 250px;
+  height: 50px;
+  max-width: 300px;
+  /*margin: 26px 15px 35px 28px;*/
+  margin-top: 24px;
+  margin-bottom:20px;
+  /*below margins center button*/
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 11px;
+  /*padding-right: 15px;*/  
+  padding-bottom: 8px;
+  border-radius: 4px;
+  background-color: #63b063;
+  box-shadow: white 0px 0px 17px 0px;
+  opacity: 1;
+  font-family: "Muli", arial;
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-indent: 0px;
+  text-transform: capitalize;
+  list-style-type: disc;
+  outline:none;
+  text-align: center;
+  text-decoration: none;
+  font-size:18px;
+}
+
+.close_button {
+  background-color:#63b063;
+  color:white;
+  width: 80px;
+  height: 40px;
+  float:right;
+  margin-right:10px;
+  margin-top:10px;
+  font-size: 12px;
+  line-height: 21px;
+  padding:5px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  padding-right:10px;
+  padding-left:10px;
+  outline:none;
+  font-weight: bold;
+}
+
+.button.profile_button.profile_button {
+  width: 80px;
+  height: 40px;
+  margin-top: -208px;
+  margin-bottom: 0px;
+  margin-left: 16px;
+  font-size: 12px;
+  line-height: 21px;
+  padding:5px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  padding-right:10px;
+  padding-left:10px;
+  outline:none;
+  font-weight: bold;
+}
+
+a.button {
+  outline:none;
+  color:#FFF;
+  font-family:Oswald, sans-serif;
+}
+a.button:hover {
+  outline:none;
+  background-color: gray;
+  text-decoration:none;
+}
+
+.btn_success {
+  display:block;
+  margin: 14px 4px 32px 27px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  padding-left: 26px;
+  background-color: rgba(28, 195, 237, 0.74);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.mainpage {
+  height: 100px;
+}
+.maintext {
+  height: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 1px;
+  border: 1px #63b063 black;
+  background-color: transparent;
+  color: #63b063;
+  font-size: 45px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.skills {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.navsection {
+  /*width: 311px;
+  height: 250px;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2px;
+  margin-bottom: -10px;
+  box-shadow: none;
+}
+.userpage {
+  height: 200px;
+  margin-top: 34px;
+}
+img.userimage {
+  display: block;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top:20px;
+  float:left;
+  /*padding-right: 1px;
+  padding-left: 2px;
+  float: right;
+  border-radius: 2px;
+  line-height: 21px;*/
+
+}
+.searchusers {
+  position: static;
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  margin-top: 65px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  clear: none;
+}
+.searchtext {
+  width: 280px;
+  margin: -48px 15px -16px;
+  padding-right: 35px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  border: 1px solid #050505;
+  border-radius: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.editBar {
+  position: static;
+  /*display: block;*/
+  overflow-x: visible;
+  overflow-y: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  clear: none;
+}
+
+.editText {
+    width: 100px;
+    margin-right: 0px;
+    font-size: 14px;
+    text-align: left;
+    /*margin-left: 29px;*/
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.heading {
+  height: 75px;
+  margin-top: 0px;
+  margin-bottom: -30px;
+  border: 0px solid white;
+  border-radius: 0px;
+  background-color: transparent;
+}
+.login_header {
+  width: 277px;
+  margin: 50px -7px 16px 14px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #e8dcdc;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: none;
+  opacity: 0.62;
+  color: black;
+  text-shadow: #403434 1px 1px 50px;
+}
+
+.login_header h1 {
+    margin-right:40px;
+}
+
+.indexbottom {
+ width:100%;
+ height:45%;
+ background:url(../images/paper_1.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.indexbody {
+ width:100%;
+ height:50%;
+ background-image: url(../images/JOBHUNT.png);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+ background-size: cover;
+}
+
+.login_section {
+  width: 100%;
+}
+
+.login_username {
+  width: 150px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 81px;
+  padding-left: 0px;
+  font-family: Oswald, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0px;
+}
+.login_text {
+  width: 270px;
+  margin-right: 0px;
+  margin-left: 20px;
+  padding-right: 12px;
+}
+.login_submit {
+  margin-top: 21px;
+  margin-left: 117px;
+  border: 2px solid black;
+  background-color: #278a3c;
+  font-family:'Open Sans', sans-serif;
+  line-height: 19px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  text-transform: uppercase;
+}
+.login_logo {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  float: right;
+}
+.image_logo {
+  background-color: rgba(227, 218, 218, 0);
+  opacity: 1;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.profile_name {
+  margin-top: 10px;
+  padding-top: 0px;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dropdown_state {
+  display: inline-block;
+  width: 130px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 15px;
+  padding: 2px 0px 3px 16px;
+}
+.create_button {
+  overflow-x: visible;
+  overflow-y: visible;
+  margin: 14px 4px 32px 27px;
+  padding-top: 0px;
+  padding-bottom: 6px;
+  padding-left: 26px;
+  background-color: rgba(28, 195, 237, 0.74);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-family:Oswald, sans-serif;
+}
+.create_labels {
+  width:300px;
+  display:block;
+  height: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left:20px;
+  padding-top: 0px;
+  padding-bottom: 13px;
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+.create_text {
+  width: 275px;
+  height: 33px;
+  margin-top: -7px;
+  margin-left: 14px;
+  font-size: 12px;
+  line-height: 19px;
+}
+.create_aster {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: #333;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.create_submit {
+  position: static;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: 75px;
+  margin-left: 115px;
+  float: none;
+  clear: both;
+  background-color: #000103;
+  font-family: Oswald, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.arrow_next {
+  height: 61px;
+  margin-top: -2px;
+  margin-bottom: 3px;
+  margin-left: 115px;
+  padding-top: 0px;
+  float: none;
+  background-color: transparent;
+}
+.arrow_next:active {
+  opacity: 1;
+}
+.image_link {
+  display: block;
+  height: 66px;
+  margin-top: 15px;
+}
+.create_image {
+  display: block;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: 99px;
+}
+.navigation {
+  height: 57px;
+  margin-top: 42px;
+}
+.profile_nav {
+  margin-top: 66px;
+}
+.settings_nav {
+  margin-top: 1px;
+  padding-top: 0px;
+}
+.choose_heading {
+  font-family: Oswald, sans-serif;
+}
+.choose_buttons {
+  margin-top: 125px;
+  padding-top: 0px;
+}
+.choose_text {
+  margin-top: -25px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+}
+.employer_form {
+  margin-top: -15px;
+}
+.nav_container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.picture_section {
+  margin-top: 15px;
+}
+.job_title {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.jobs_container {
+  margin-top: 20px;
+}
+.job_company {
+  margin-top: 12px;
+  font-size: 15px;
+}
+.settings_cont {
+  height: 400px;
+  margin-top: 60px;
+}
+.hunter_name {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.input_label{
+  display: block;
+  text-align: center;
+  font-family:"Muli", arial;
+  font-size:15px;
+  letter-spacing: 3px;
+}
+
+a {
+  font-family:Arial;
+  outline: none;
+  text-decoration:none;
+  color:gray;
+}
+
+a:hover {
+  font-family:Arial;
+  text-decoration:none;
+}
+
+a[id]:hover {
+  color: #63b063;
+}
