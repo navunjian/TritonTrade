@@ -21,25 +21,23 @@ hbs = handlebars.create({
     // with the client-side of the app (see below).
     partialsDir: ['views/partials/'] // ,'shared/templates/']
 });
-
-
-//route files to load
-var index = require('./routes/index');
-var log_in = require('./routes/log_in');
-var home = require('./routes/home');
-
 var app = express();
+
 
 //load environment variables
 var dotenv = require('dotenv');
 dotenv.load();
+
+//route files to load
+var index = require('./routes/index');
+var loggedIn = require('./routes/loggedIn');
 
 
 //database setup - uncomment to set up your database
 //var mongoose = require('mongoose');
 //mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/DATABASE1);
 var conf = {
-	client_id: process.env.facebook_app_id
+  client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
   , scope: 'email, user_about_me, user_activities, user_actions.music, read_stream'
   , redirect_uri: 'http://localhost:3000/auth/facebook'
@@ -113,11 +111,7 @@ app.post('/loggedIn', loggedIn.view);
 app.post('/', index.view);
 // URLS that we can use in our html
 app.get('/', index.view);
-app.get('/home', home.view);
-app.get('/log_in', log_in.view);
 // app.get('/authenticate', log_in.authenticate);
-app.get('/logout', log_in.logout);
-
 app.post('/auth/facebook/canvas', graph.authorize);
 //app.get('/loggedIn', loggedIn.userinfo);
 
@@ -125,5 +119,5 @@ app.post('/auth/facebook/canvas', graph.authorize);
 //set environment ports and start application
 app.set('port', process.env.PORT || 3000);
 http.createServer(app).listen(app.get('port'), function(){
-	console.log('Express server listening on port ' + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port'));
 });
