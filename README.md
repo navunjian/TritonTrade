@@ -1,5 +1,5 @@
-COGS120
+COGS121
 =======
 
-Github for our COGS120 class project at http://jobhunt.herokuapp.com/
-Currently under development and meant to be viewed on a mobile device so it may look strange on a desktop.
+Triton Trade - a redesign of UCSD's Free and For Sale Facebook Page.
+Find it at https://tritontrade.herokuapp.com
