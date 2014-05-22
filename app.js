@@ -30,7 +30,7 @@ dotenv.load();
 
 //route files to load
 var index = require('./routes/index');
-var loggedIn = require('./routes/loggedIn');
+var home = require('./routes/home');
 
 
 //database setup - uncomment to set up your database
@@ -45,7 +45,7 @@ var conf = {
 
 //Configures the Template engine
 app.configure(function() {
-app.engine('handlebars', handlebars());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -101,13 +101,13 @@ app.get('/me/music', function(req, res) {
   graph.get('/me/music', function(err, response) {
     console.log(response);
     bands = {music:response};
-    res.render('loggedIn', bands);
+    res.render('home', bands);
   });
 });
 
 // user gets sent here after being authorized
-app.get('/loggedIn', loggedIn.view);
-app.post('/loggedIn', loggedIn.view);
+app.get('/home', home.view);
+app.post('/home', home.view);
 app.post('/', index.view);
 // URLS that we can use in our html
 app.get('/', index.view);
