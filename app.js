@@ -31,6 +31,7 @@ dotenv.load();
 //route files to load
 var index = require('./routes/index');
 var home = require('./routes/home');
+var settings = require('./routes/settings');
 
 
 //database setup - uncomment to set up your database
@@ -95,17 +96,18 @@ app.get('/auth/facebook', function(req, res) {
   }, function (err, facebookRes) {
     res.redirect('/331733603546959/feed');
   });
-});
 
-app.get('/331733603546959/feed', function(req, res) { 
-  graph.get('331733603546959/feed', function(err, response) {
-    console.log(response);
-    feed = {feed:response};
-    res.render('home', feed);
-  });
+    app.get('/331733603546959/feed', function(req, res) { 
+      graph.get('/331733603546959/feed', function(err, response) {
+        message = {feed:response};
+        res.render('home', message);
+      });
+    });
+    
 });
 
 // user gets sent here after being authorized
+app.get('/settings', settings.view);
 app.get('/home', home.view);
 app.post('/home', home.view);
 app.post('/', index.view);

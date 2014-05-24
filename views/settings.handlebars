@@ -10,12 +10,8 @@
         </div>
 </div>
 <div class="feed_bcg">
-    {{#each feed.data}}
-     <div class="feed_bcg2">
-         <br>
-         <img src="{{picture}}">
-                  {{message}} 
-         <br>
-     </div>
-    {{/each}}                   
+	 Here are your search results:
+            {{#each search.data}}
+              {{message}}
+            {{/each}}
 </div>
