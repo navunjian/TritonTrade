@@ -10,5 +10,8 @@
         </div>
 </div>
 <div class="feed_bcg">
-	<h1> There's no need to put any head or body in handlebars - the template is under views > layouts > main.handlebars </h1>
+	 Here are your page likes:
+            {{#each feed.data}}
+              {{message}}
+            {{/each}}
 </div>

@@ -39,7 +39,7 @@ var home = require('./routes/home');
 var conf = {
   client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
-  , scope: 'email, user_about_me, user_activities, user_actions.music, read_stream'
+  , scope: 'email, user_about_me, user_groups, friends_groups, read_stream'
   , redirect_uri: 'http://localhost:3000/auth/facebook'
 };
 
@@ -93,15 +93,15 @@ app.get('/auth/facebook', function(req, res) {
     , "client_secret":  conf.client_secret
     , "code":           req.query.code
   }, function (err, facebookRes) {
-    res.redirect('/me/music');
+    res.redirect('/331733603546959/feed');
   });
 });
 
-app.get('/me/music', function(req, res) { 
-  graph.get('/me/music', function(err, response) {
+app.get('/331733603546959/feed', function(req, res) { 
+  graph.get('331733603546959/feed', function(err, response) {
     console.log(response);
-    bands = {music:response};
-    res.render('home', bands);
+    feed = {feed:response};
+    res.render('home', feed);
   });
 });
 
