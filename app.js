@@ -6,7 +6,8 @@
  //dependencies for each module used
  var express   = require('express')
  , graph     = require('fbgraph')
- , app       = module.exports = express.createServer();
+ var app = express()
+ // , app       = module.exports = express.createServer();
  var http = require('http');
  var path = require('path');
  var handlebars = require('express3-handlebars');
@@ -104,8 +105,6 @@ app.get('/buyers', function(req, res) {
   graph.get('/331733603546959/feed', function(err, response) {
     var strResp = response.data;
     var buying = [];
-    // var selling = [];
-    // console.log(strResp.length);
     function fakeForLoop(i) {
       if ( i < strResp.length ) {
         var temp = strResp[i].message;
@@ -120,6 +119,7 @@ app.get('/buyers', function(req, res) {
       }
     }
     fakeForLoop(0);
+    console.log(buying);
     res.render('buyers', buying);
   });
 });
