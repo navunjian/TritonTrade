@@ -20,12 +20,19 @@ body {
 .feed_bcg {
 	background-color:white;
 	width:76%;
-	height:60%;
+	height:100%;
 	margin:0 auto;
 	border: 2px white solid;
 	border-radius:10px;
 	margin-top:50px;
+}
 
-
-
+.feed_bcg2 {
+	background-color:#C2FF85;
+	width:60%;
+	height:60%;
+	margin:0 auto;
+	border: 2px #C2FF85 solid;
+	border-radius:10px;
+	margin-top:50px;
 }
