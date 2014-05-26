@@ -4,23 +4,23 @@
  */
 
  //dependencies for each module used
-var express   = require('express')
-  , graph     = require('fbgraph')
-  , app       = module.exports = express.createServer();
-var http = require('http');
-var path = require('path');
-var handlebars = require('express3-handlebars');
+ var express   = require('express')
+ , graph     = require('fbgraph')
+ , app       = module.exports = express.createServer();
+ var http = require('http');
+ var path = require('path');
+ var handlebars = require('express3-handlebars');
 
 
 // Create `ExpressHandlebars` instance with a default layout.
 hbs = handlebars.create({
-    defaultLayout: 'main',
+  defaultLayout: 'main',
     // helpers      : helpers,
 
     // Uses multiple partials dirs, templates in "shared/templates/" are shared
     // with the client-side of the app (see below).
     partialsDir: ['views/partials/'] // ,'shared/templates/']
-});
+  });
 var app = express();
 
 
@@ -31,6 +31,8 @@ dotenv.load();
 //route files to load
 var index = require('./routes/index');
 var home = require('./routes/home');
+var buyers = require('./routes/buyers');
+var sellers = require('./routes/sellers');
 
 
 //database setup - uncomment to set up your database
@@ -39,19 +41,19 @@ var home = require('./routes/home');
 var conf = {
   client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
-  , scope: 'email, user_about_me, user_groups, friends_groups, read_stream'
+  , scope: 'email, user_about_me, user_groups, friends_groups, read_stream, manage_pages'
   , redirect_uri: 'http://localhost:3000/auth/facebook'
 };
 
 //Configures the Template engine
 app.configure(function() {
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-app.set('views', __dirname + '/views');
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(app.router);
+  app.engine('handlebars', hbs.engine);
+  app.set('view engine', 'handlebars');
+  app.set('views', __dirname + '/views');
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(app.router);
 });
 
 
@@ -72,7 +74,7 @@ app.get('/auth/facebook', function(req, res) {
   // so we'll redirect to the oauth dialog
   if (!req.query.code) {
     var authUrl = graph.getOauthUrl({
-        "client_id":     conf.client_id
+      "client_id":     conf.client_id
       , "redirect_uri":  conf.redirect_uri
       , "scope":         conf.scope
     });
@@ -80,28 +82,68 @@ app.get('/auth/facebook', function(req, res) {
     if (!req.query.error) { //checks whether a user denied the app facebook login/permissions
       res.redirect(authUrl);
     } else {  //req.query.error == 'access_denied'
-      res.send('access denied');
-    }
-    return;
+    res.send('access denied');
   }
+  return;
+}
 
   // code is set
   // we'll send that and get the access token
   graph.authorize({
-      "client_id":      conf.client_id
+    "client_id":      conf.client_id
     , "redirect_uri":   conf.redirect_uri
     , "client_secret":  conf.client_secret
     , "code":           req.query.code
   }, function (err, facebookRes) {
-    res.redirect('/331733603546959/feed');
+    res.redirect('/home');
   });
 });
 
-app.get('/331733603546959/feed', function(req, res) { 
-  graph.get('331733603546959/feed', function(err, response) {
-    console.log(response);
-    feed = {feed:response};
-    res.render('home', feed);
+// filter out buyers by keyword "buying" and "looking for"
+app.get('/buyers', function(req, res) { 
+  graph.get('/331733603546959/feed', function(err, response) {
+    var strResp = response.data;
+    var buying = [];
+    // var selling = [];
+    // console.log(strResp.length);
+    function fakeForLoop(i) {
+      if ( i < strResp.length ) {
+        var temp = strResp[i].message;
+        temp = temp.toLowerCase();
+        if (temp.match(/buying/)) {
+          buying.push(strResp[i]);
+        } 
+        if (temp.match(/looking\sfor/)) {
+          buying.push(strResp[i]);
+        }
+        fakeForLoop(i+1);
+      }
+    }
+    fakeForLoop(0);
+    res.render('buyers', buying);
+  });
+});
+
+// filter out sellers by keyword "selling" and "for sale"
+app.get('/sellers', function(req, res) { 
+  graph.get('/331733603546959/feed', function(err, response) {
+    var strResp = response.data;
+    var selling = [];
+    function fakeForLoop(i) {
+      if ( i < strResp.length ) {
+        var temp = strResp[i].message;
+        temp = temp.toLowerCase();
+        if (temp.match(/selling/)) {
+          selling.push(strResp[i]);
+        } 
+        if (temp.match(/for\ssale/)) {
+          selling.push(strResp[i]);
+        }
+        fakeForLoop(i+1);
+      }
+    }
+    fakeForLoop(0);
+    res.render('sellers', selling);
   });
 });
 
@@ -111,6 +153,10 @@ app.post('/home', home.view);
 app.post('/', index.view);
 // URLS that we can use in our html
 app.get('/', index.view);
+app.get('/buyers', buyers.view);
+app.post('/buyers', buyers.view);
+app.get('/sellers', sellers.view);
+app.post('/sellers', sellers.view);
 // app.get('/authenticate', log_in.authenticate);
 app.post('/auth/facebook/canvas', graph.authorize);
 //app.get('/loggedIn', loggedIn.userinfo);

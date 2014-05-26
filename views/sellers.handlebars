@@ -31,13 +31,13 @@
         </div>
 </div>
 
+<h2> SELLERS </h2>
+
   <div class="feed_bcg">
-      <form action="/buyers">
-        <input type="submit" value="BUYERS">
-      </form>
-      <form action="/sellers">
-        <input type="submit" value="SELLERS">
-      </form>
+     POSTS:
+              {{#each this}}
+                <p>{{message}}</p>
+              {{/each}}
   </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
