@@ -34,9 +34,17 @@
 <h2> BUYERS </h2>
 
   <div class="feed_bcg">
-     POSTS:
               {{#each this}}
-                <p>{{message}}<br/><img src={{picture}} width="100" height="100"></p>
+              <div class="post">
+                <div class="row">
+                  <div class="col-xs-5">
+                    <img src={{picture}} width="100">
+                </div>
+                <div class="col-xs-7">
+                  <p>{{message}}</p>
+                </div>
+                </div>
+              </div>
               {{/each}}
   </div>
     <script src="https://code.jquery.com/jquery.js"></script>

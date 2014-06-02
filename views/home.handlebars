@@ -34,18 +34,29 @@
 
   <div class="feed_bcg">
       <br>
-      <form action="/buyers">
-        <input type="submit" value="BUYERS">
-      </form>
-      <form action="/sellers">
-        <input type="submit" value="SELLERS">
-      </form>
+      <div class="row">
+        <div class="col-sm-4">
+          <form action="/buyers">
+          <input type="submit" value="BUYERS">
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <form action="/sellers" >
+            <input type="submit" value="SELLERS">
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <form action="/sellers" >
+            <input type="submit" value="FREE">
+          </form>
+        </div>
+      </div>
   </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
-=======
+
 </div>
 <div class="feed_bcg">
     {{#each feed.data}}
@@ -57,4 +68,4 @@
      </div>
     {{/each}}                   
 </div>
->>>>>>> 31bb989ef53f9bd89ad4d468789cb4fc759064cf
+

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 /* custom css */
 
 .form-inline {
@@ -6,11 +7,47 @@
 }
 
 body {
-    background: url("../images/star_background.png") no-repeat center center fixed; 
+    /*background: url("../images/star_background.png") no-repeat center center fixed;*/ 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+input {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
+}
+
+
+/*
+Bottom Navigation Styles ============================== */
+.footer {
+	background: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.nav-tabs > li > a {
+	font-size: 10px;
+	text-align: center;
+	width: 100%;
+	color: #000;
+}
+
+.nav-tabs > li {
+	width: 20%;
+	border-top: 1px solid black;
+}
+
+.fa {
+	font-size: 22px;
 }
 
 .glyphicon{
@@ -19,7 +56,7 @@ body {
 
 .feed_bcg {
 	background-color:white;
-	width:76%;
+	width:90%;
 	height:100%;
 	margin:0 auto;
 	border: 2px white solid;
@@ -35,4 +72,11 @@ body {
 	border: 2px #C2FF85 solid;
 	border-radius:10px;
 	margin-top:50px;
+}
+
+.post {
+	border-radius: 8px;
+	background: #66A2AE;
+	padding: 1.5em;
+	margin-bottom: 10px;
 }
