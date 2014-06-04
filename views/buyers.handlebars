@@ -21,7 +21,7 @@
   {{> nav_bar}}
 
 
-<div class="form-inline">
+<div class="form-inline" id="searchbar">
         <form class="navbar-form" role="search">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
@@ -31,18 +31,33 @@
         </div>
 </div>
 
-<h2> BUYERS </h2>
+<!-- BUYERS/SELLERS/FREE filter -->
+<div class="row">
+  <div class="col-xs-4">
+      <form action="/buyers">
+      <input id="buy-btn" type="submit" value="BUYING" style="border: 4px solid #fff">
+      </form>
+  </div>
+  <div class="col-xs-4">
+      <form action="/sellers" >
+      <input id="sell-btn" type="submit" value="SELLING">
+      </form>
+  </div>
+  <div class="col-xs-4">
+      <form action="/sellers" >
+      <input id="free-btn" type="submit" value="FREE">
+      </form>
+   </div>
+</div>
+
 
   <div class="feed_bcg">
               {{#each this}}
-              <div class="post">
+              <div class="buy-post">
                 <div class="row">
-                  <div class="col-xs-5">
-                    <img src={{picture}} width="100">
-                </div>
-                <div class="col-xs-7">
+                  
                   <p>{{message}}</p>
-                </div>
+
                 </div>
               </div>
               {{/each}}
