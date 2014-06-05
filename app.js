@@ -119,6 +119,12 @@ app.get('/buyers', function(req, res) {
         if (temp.match(/looking\sfor/)) {
           buying.push(strResp[i]);
         }
+        if (temp.match(/looking/)) {
+          buying.push(strResp[i]);
+        }
+        if (temp.match(/need/)) {
+          buying.push(strResp[i]);
+        }
         fakeForLoop(i+1);
       }
     }
@@ -140,6 +146,12 @@ app.get('/sellers', function(req, res) {
           selling.push(strResp[i]);
         } 
         if (temp.match(/for\ssale/)) {
+          selling.push(strResp[i]);
+        }
+        if (temp.match(/used/)) {
+          selling.push(strResp[i]);
+        }
+        if (temp.match(/obo/)) {
           selling.push(strResp[i]);
         }
         fakeForLoop(i+1);
