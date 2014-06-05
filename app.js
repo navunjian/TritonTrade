@@ -32,12 +32,9 @@ dotenv.load();
 //route files to load
 var index = require('./routes/index');
 var home = require('./routes/home');
-// <<<<<<< HEAD
 var buyers = require('./routes/buyers');
 var sellers = require('./routes/sellers');
-// =======
 var settings = require('./routes/settings');
-// >>>>>>> 31bb989ef53f9bd89ad4d468789cb4fc759064cf
 
 
 //database setup - uncomment to set up your database
@@ -149,14 +146,6 @@ app.get('/sellers', function(req, res) {
     fakeForLoop(0);
     res.render('sellers', selling);
   });
-// =======
-//     app.get('/331733603546959/feed', function(req, res) { 
-//       graph.get('/331733603546959/feed', function(err, response) {
-//         message = {feed:response};
-//         res.render('home', message);
-//       });
-//     });
-    
 });
 
 // user gets sent here after being authorized
