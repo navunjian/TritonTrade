@@ -46,8 +46,8 @@ var conf = {
   client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
   , scope: 'email, user_about_me, user_groups, friends_groups, read_stream, manage_pages'
-  // , redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
-    , redirect_uri: 'http://localhost:3000/auth/facebook'
+  , redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
+    // , redirect_uri: 'http://localhost:3000/auth/facebook'
 };
 
 //Configures the Template engine
@@ -115,7 +115,7 @@ app.get('/buyers', function(req, res) {
         temp = temp.toLowerCase();
         if (temp.match(/buying/)) {
           buying.push(strResp[i]);
-        } 
+        }
         if (temp.match(/looking\sfor/)) {
           buying.push(strResp[i]);
         }
@@ -171,7 +171,7 @@ app.get('/free', function(req, res) {
       if ( i < strResp.length ) {
         var temp = strResp[i].message;
         temp = temp.toLowerCase();
-        if (temp.match(/free/)) {
+        if (temp.match(/giving\saway/)) {
           freeItems.push(strResp[i]);
         } 
         fakeForLoop(i+1);
