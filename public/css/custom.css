@@ -20,7 +20,15 @@ html {
 	background-color: #414345;
 }
 
-input {
+h1, h4 {
+	color: #fff;
+}
+
+label {
+	color: #fff;
+}
+
+#facebook-login-btn {
 	border-radius: 5px;
 	background-color: #66A2AE;
 	color: white;
@@ -28,10 +36,6 @@ input {
 	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: 1.5px;
 	padding: 0.7em 2em;
-}
-
-h1 {
-	color: #fff;
 }
 
 
@@ -63,14 +67,35 @@ Bottom Navigation Styles ============================== */
 /*
 BUYERS/SELLERS/FREE filter buttons =================== */
 #buy-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
 	background-color: #66A2AE;
 }
 
 #sell-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
 	background-color: #c3b6d1;
 }
 
 #free-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
 	background-color: #afc99a;
 }
 
@@ -114,8 +139,10 @@ Search bar ========================================== */
 	padding: 2em 4em;
 	margin-bottom: 30px;
 	background-color: white;
-	font-size: 10px;
+	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	border-top: 20px solid #66A2AE;
 }
 
 .sell-post {
@@ -127,6 +154,7 @@ Search bar ========================================== */
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
 	width: 100%;
+	border-top: 20px solid #c3b6d1;
 }
 
 .image {

@@ -34,6 +34,7 @@ var index = require('./routes/index');
 var home = require('./routes/home');
 // <<<<<<< HEAD
 var buyers = require('./routes/buyers');
+var newpost = require('./routes/newpost');
 var sellers = require('./routes/sellers');
 // =======
 var settings = require('./routes/settings');
@@ -170,6 +171,7 @@ app.get('/buyers', buyers.view);
 app.post('/buyers', buyers.view);
 app.get('/sellers', sellers.view);
 app.post('/sellers', sellers.view);
+app.get('/newpost', newpost.view);
 // app.get('/authenticate', log_in.authenticate);
 app.post('/auth/facebook/canvas', graph.authorize);
 //app.get('/loggedIn', loggedIn.userinfo);
