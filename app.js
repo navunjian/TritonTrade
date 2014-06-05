@@ -33,6 +33,7 @@ dotenv.load();
 var index = require('./routes/index');
 var home = require('./routes/home');
 var buyers = require('./routes/buyers');
+var newpost = require('./routes/newpost');
 var sellers = require('./routes/sellers');
 var settings = require('./routes/settings');
 
@@ -44,7 +45,7 @@ var conf = {
   client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
   , scope: 'email, user_about_me, user_groups, friends_groups, read_stream, manage_pages'
-  , redirect_uri: 'http://localhost:3000/auth/facebook'
+  , redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
 };
 
 //Configures the Template engine
@@ -159,6 +160,7 @@ app.get('/buyers', buyers.view);
 app.post('/buyers', buyers.view);
 app.get('/sellers', sellers.view);
 app.post('/sellers', sellers.view);
+app.get('/newpost', newpost.view);
 // app.get('/authenticate', log_in.authenticate);
 app.post('/auth/facebook/canvas', graph.authorize);
 //app.get('/loggedIn', loggedIn.userinfo);

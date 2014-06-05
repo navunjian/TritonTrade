@@ -31,21 +31,33 @@
 </div> -->
 
 <body>
-
-  <div class="feed_bcg">
+  <div>
       <br>
-      <form action="/buyers">
-        <input type="submit" value="BUYERS">
-      </form>
-      <form action="/sellers">
-        <input type="submit" value="SELLERS">
-      </form>
+      <center>
+      <div class="row" style="vertical-alignment: center; text-alignment: center; margin-top: 100px;">
+        <div class="col-md-4">
+          <form action="/buyers">
+          <input id="buy-btn" type="submit" value="BUYERS">
+          </form>
+        </div>
+
+        <div class="col-md-4">
+          <form action="/sellers" >
+            <input id="sell-btn" type="submit" value="SELLERS">
+          </form>
+        </div>
+      
+        <div class="col-md-4">
+          <form action="/sellers" >
+            <input id="free-btn" type="submit" value="FREE">
+          </form>
+        </div>
+      </div>
+  </center>
   </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-</body>
-</html>
-=======
+
 </div>
 <div class="feed_bcg">
     {{#each feed.data}}
@@ -57,4 +69,6 @@
      </div>
     {{/each}}                   
 </div>
->>>>>>> 31bb989ef53f9bd89ad4d468789cb4fc759064cf
+</body>
+</html>
+

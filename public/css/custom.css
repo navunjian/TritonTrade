@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /* custom css */
 
 .form-inline {
@@ -6,11 +7,108 @@
 }
 
 body {
-    background: url("../images/star_background.png") no-repeat center center fixed; 
-    -webkit-background-size: cover;
+    /*background: url("../images/star_background.png") no-repeat center center fixed;*/ 
+    /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
+    background-color: #414345;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	background-color: #414345;
+}
+
+h1, h4 {
+	color: #fff;
+}
+
+label {
+	color: #fff;
+}
+
+#facebook-login-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
+}
+
+
+/*
+Bottom Navigation Styles ============================== */
+.footer {
+	background: #f1f1f1;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.nav-tabs > li > a {
+	font-size: 10px;
+	text-align: center;
+	width: 100%;
+	color: #000;
+}
+
+.nav-tabs > li {
+	width: 20%;
+	border-top: 1px solid black;
+}
+
+.fa {
+	font-size: 22px;
+}
+
+/*
+BUYERS/SELLERS/FREE filter buttons =================== */
+#buy-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
+	background-color: #66A2AE;
+}
+
+#sell-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
+	background-color: #c3b6d1;
+}
+
+#free-btn {
+	border-radius: 5px;
+	background-color: #66A2AE;
+	color: white;
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	padding: 0.7em 2em;
+	background-color: #afc99a;
+}
+
+/*
+Search bar ========================================== */
+.form-inline {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#searchbar {
+	margin-bottom: 30px;
 }
 
 .glyphicon{
@@ -18,21 +116,50 @@ body {
 }
 
 .feed_bcg {
-	background-color:white;
-	width:76%;
+	width:90%;
 	height:100%;
 	margin:0 auto;
-	border: 2px white solid;
 	border-radius:10px;
 	margin-top:50px;
+	margin-bottom: 100px;
 }
 
 .feed_bcg2 {
-	background-color:#C2FF85;
 	width:60%;
 	height:60%;
 	margin:0 auto;
-	border: 2px #C2FF85 solid;
 	border-radius:10px;
 	margin-top:50px;
+	margin-bottom: 100px;
+}
+
+.buy-post {
+	border-radius: 4px;
+	background: #66A2AE;
+	padding: 2em 4em;
+	margin-bottom: 30px;
+	background-color: white;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	border-top: 20px solid #66A2AE;
+}
+
+.sell-post {
+	border-radius: 4px;
+	background: #c3b6d1;
+	padding: 2em 4em;
+	margin-bottom: 30px;
+	background-color: white;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	border-top: 20px solid #c3b6d1;
+}
+
+.image {
+	margin: 10px auto;
+	border-radius: 8px;
+	width: 50%;
+	text-align: center;
 }
