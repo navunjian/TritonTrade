@@ -17,9 +17,11 @@
       <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 </head>
 
+<body>
   {{> nav_bar}}
-<!-- 
-<div class="form-inline">
+
+
+<div class="form-inline" id="searchbar">
         <form class="navbar-form" role="search">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
@@ -27,48 +29,38 @@
                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
         </div>
-<<<<<<< HEAD
-</div> -->
+</div>
 
-<body>
-  <div>
-      <br>
-      <center>
-      <div class="row" style="vertical-alignment: center; text-alignment: center; margin-top: 100px;">
-        <div class="col-md-4">
-          <form action="/buyers">
-          <input id="buy-btn" type="submit" value="BUYERS">
-          </form>
-        </div>
+<!-- BUYERS/SELLERS/FREE filter -->
+<div class="row">
+  <div class="col-xs-4">
+      <form action="/buyers">
+      <input id="buy-btn" type="submit" value="BUYING">
+      </form>
+  </div>
+  <div class="col-xs-4">
+      <form action="/sellers" >
+      <input id="sell-btn" type="submit" value="SELLING">
+      </form>
+  </div>
+  <div class="col-xs-4">
+      <form action="/free" >
+      <input id="free-btn" type="submit" value="FREE" style="border: 4px solid #fff">
+      </form>
+   </div>
+</div>
 
-        <div class="col-md-4">
-          <form action="/sellers" >
-            <input id="sell-btn" type="submit" value="SELLERS">
-          </form>
-        </div>
-      
-        <div class="col-md-4">
-          <form action="/free" >
-            <input id="free-btn" type="submit" value="FREE">
-          </form>
-        </div>
-      </div>
-  </center>
+    <div class="feed_bcg">
+              {{#each this}}
+              <!-- <div class="free-post"> -->
+                <!-- <div class="row"> -->
+                  <p>{{message}}</p>
+                   <center><img class="image" src={{picture}}></center>
+                <!-- </div> -->
+              <!-- </div> -->
+              {{/each}}
   </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-
-</div>
-<div class="feed_bcg">
-    {{#each feed.data}}
-     <div class="feed_bcg2">
-         <br>
-         <img src="{{picture}}">
-                  {{message}} 
-         <br>
-     </div>
-    {{/each}}                   
-</div>
 </body>
 </html>
-

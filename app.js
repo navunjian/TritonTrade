@@ -35,6 +35,7 @@ var home = require('./routes/home');
 var buyers = require('./routes/buyers');
 var newpost = require('./routes/newpost');
 var sellers = require('./routes/sellers');
+var free = require('./routes/free');
 var settings = require('./routes/settings');
 
 
@@ -45,7 +46,8 @@ var conf = {
   client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
   , scope: 'email, user_about_me, user_groups, friends_groups, read_stream, manage_pages'
-  , redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
+  // , redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
+    , redirect_uri: 'http://localhost:3000/auth/facebook'
 };
 
 //Configures the Template engine
@@ -121,7 +123,6 @@ app.get('/buyers', function(req, res) {
       }
     }
     fakeForLoop(0);
-    // console.log(buying);
     res.render('buyers', buying);
   });
 });
@@ -149,6 +150,26 @@ app.get('/sellers', function(req, res) {
   });
 });
 
+// filter out free by keyword "free"
+app.get('/free', function(req, res) { 
+  graph.get('/331733603546959/feed', function(err, response) {
+    var strResp = response.data;
+    var freeItems = [];
+    function fakeForLoop(i) {
+      if ( i < strResp.length ) {
+        var temp = strResp[i].message;
+        temp = temp.toLowerCase();
+        if (temp.match(/free/)) {
+          freeItems.push(strResp[i]);
+        } 
+        fakeForLoop(i+1);
+      }
+    }
+    fakeForLoop(0);
+    res.render('free', freeItems);
+  });
+});
+
 // user gets sent here after being authorized
 app.get('/settings', settings.view);
 app.get('/home', home.view);
@@ -160,6 +181,8 @@ app.get('/buyers', buyers.view);
 app.post('/buyers', buyers.view);
 app.get('/sellers', sellers.view);
 app.post('/sellers', sellers.view);
+app.get('/free', free.view);
+app.post('/free', free.view);
 app.get('/newpost', newpost.view);
 // app.get('/authenticate', log_in.authenticate);
 app.post('/auth/facebook/canvas', graph.authorize);

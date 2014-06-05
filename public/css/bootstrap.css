@@ -7123,3 +7123,7 @@ td.visible-print {
     display: none !important;
   }
 }
+
+.white-color{
+  color: #ffffff;
+}
