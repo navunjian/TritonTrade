@@ -46,8 +46,8 @@ var conf = {
   client_id: process.env.facebook_app_id
   , client_secret: process.env.facebook_app_secret
   , scope: 'email, user_about_me, user_groups, friends_groups, read_stream, manage_pages'
-  , redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
-    // , redirect_uri: 'http://localhost:3000/auth/facebook'
+  //, redirect_uri: 'https://tritontrade.herokuapp.com/auth/facebook'
+ , redirect_uri: 'http://localhost:3000/auth/facebook'
 };
 
 //Configures the Template engine
