@@ -61,6 +61,22 @@
               </div>
               {{/each}}
   </div>
+
+   <div id="shownewpost" class="feed_bcg">
+      {{#each posts}}
+      <div class="sell-post">
+        <div class="row">
+            <p> {{title}} </p>
+            <p> {{description}} </p>
+            <p> {{condition}} </p>
+            <p> {{price}} </p>
+            <p> {{itemaction}} </p>
+        </div>
+      </div>
+      {{/each}}
+  </div>
+
+  
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
