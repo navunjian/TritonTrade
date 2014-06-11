@@ -32,23 +32,28 @@
 </div>
 
 <!-- BUYERS/SELLERS/FREE filter -->
-<div class="row">
-  <div class="col-xs-4">
-      <form action="/buyers">
-      <input id="buy-btn" type="submit" value="BUYING">
-      </form>
-  </div>
-  <div class="col-xs-4">
-      <form action="/sellers" >
-      <input id="sell-btn" type="submit" value="SELLING" style="border: 4px solid #fff">
-      </form>
-  </div>
-  <div class="col-xs-4">
-      <form action="/free" >
-      <input id="free-btn" type="submit" value="FREE">
-      </form>
-   </div>
-</div>
+<center>
+      <div class="row" style="vertical-alignment: center; text-alignment: center; margin-top: 100px;">
+        <div class="col-md-4">
+          <form action="/buyers">
+          <input id="buy-btn" type="submit" value="BUYERS">
+          </form>
+        </div>
+
+        <div class="col-md-4">
+          <form action="/sellers" >
+            <input id="sell-btn" type="submit" value="SELLERS" style="border: 4px solid #fff">
+          </form>
+        </div>
+      
+        <div class="col-md-4">
+          <form action="/free" >
+            <input id="free-btn" type="submit" value="FREE">
+          </form>
+        </div>
+      </div>
+  </center>
+
 
 
   <div class="feed_bcg">
@@ -56,23 +61,19 @@
               <div class="sell-post">
                 <div class="row">
                   <p>{{message}}</p>
-                   <center><img class="image" src={{picture}}></center>
+                   <center><img class="image" src= {{picture}}></center>
                 </div>
               </div>
               {{/each}}
   </div>
 
-   <div id="shownewpost" class="feed_bcg">
+   <div class="feed_bcg">
       {{#each posts}}
-      <div class="sell-post">
-        <div class="row">
             <p> {{title}} </p>
             <p> {{description}} </p>
             <p> {{condition}} </p>
             <p> {{price}} </p>
             <p> {{itemaction}} </p>
-        </div>
-      </div>
       {{/each}}
   </div>
 
