@@ -51,7 +51,7 @@
    </div>
 </div>
 </center>
-    <div class="feed_bcg">
+<!--     <div class="feed_bcg">
               {{#each this}}
                <div class="free-post"> 
                 <div class="row">
@@ -60,6 +60,28 @@
                   <p>{{message}}</p>
                 </div> 
               </div> 
+              {{/each}}
+  </div> -->
+    <div class="feed_bcg">
+              {{#each this}}
+              <div class="free-post">
+                <div class="row">
+                  <div class="col-xs-4">
+                    <img class="profile-img" src="http://graph.facebook.com/{{from.id}}/picture">
+                  </div>
+                  <div class="col-xs-8">
+                    <p class="name">{{from.name}}  <span class="fa fa-envelope-o"></span></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <img class="profile-img" src="{{picture}}" style="margin-top: 10px">
+                  </div>
+                  <div class="col-xs-8">
+                    <p class="message">{{message}}</p>
+                  </div>
+                </div>
+                </div>
               {{/each}}
   </div>
     <script src="https://code.jquery.com/jquery.js"></script>

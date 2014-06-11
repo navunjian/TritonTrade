@@ -178,6 +178,17 @@ Search bar ========================================== */
 	border-top: 20px solid #E9B163;
 }
 
+.post {
+		border-radius: 4px;
+	padding: 2em 4em;
+	margin-bottom: 30px;
+	background-color: white;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	border-top: 20px solid #f1f1f1;
+}
+
 .free-post {
 	border-radius: 4px;
 	padding: 2em 4em;
@@ -194,6 +205,20 @@ Search bar ========================================== */
 	border-radius: 8px;
 	width: 50%;
 	text-align: center;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.profile-img {
+	width: 100%;
+}
+
+.message {
+	font-size: 14px;
 }
 
 /*
