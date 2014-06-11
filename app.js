@@ -118,6 +118,7 @@ app.get('/buyers', function(req, res) {
          if(temp!= undefined){
             temp = temp.toLowerCase();
             if (temp.match(/buying/)) {
+              // console.log(strResp[i].from.id);
               buying.push(strResp[i]);
             }
             if (temp.match(/looking\sfor/)) {
@@ -126,15 +127,19 @@ app.get('/buyers', function(req, res) {
             if (temp.match(/looking/)) {
               buying.push(strResp[i]);
             }
-            if (temp.match(/need/)) {
-              buying.push(strResp[i]);
-            }
           }
         fakeForLoop(i+1);
       }
     }
     fakeForLoop(0);
     res.render('buyers', buying);
+  });
+});
+
+app.get('/home', function(req, res) { 
+  graph.get('/331733603546959/feed', function(err, response) {
+    var strResp = response.data;
+    res.render('home', strResp);
   });
 });
 

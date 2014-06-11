@@ -33,25 +33,23 @@
 
 <!-- BUYERS/SELLERS/FREE filter -->
 <center>
-      <div class="row" style="vertical-alignment: center; text-alignment: center; margin-top: 100px;">
-        <div class="col-md-4">
-          <form action="/buyers">
-          <input id="buy-btn" type="submit" value="BUYERS">
-          </form>
-        </div>
-
-        <div class="col-md-4">
-          <form action="/sellers" >
-            <input id="sell-btn" type="submit" value="SELLERS" style="border: 4px solid #fff">
-          </form>
-        </div>
-      
-        <div class="col-md-4">
-          <form action="/free" >
-            <input id="free-btn" type="submit" value="FREE">
-          </form>
-        </div>
-      </div>
+<div class="row">
+  <div class="col-xs-4">
+      <form action="/buyers">
+          <input id="buy-btn" type="submit" value="BUYING">
+      </form>
+  </div>
+  <div class="col-xs-4">
+      <form action="/sellers" >
+      <input id="sell-btn" type="submit" value="SELLING" style="border: 4px solid #fff">
+      </form>
+  </div>
+  <div class="col-xs-4">
+      <form action="/free" >
+      <input id="free-btn" type="submit" value="FREE">
+      </form>
+   </div>
+</div>
   </center>
 
 
@@ -60,9 +58,9 @@
               {{#each this}}
               <div class="sell-post">
                 <div class="row">
-                  <p>{{name}}</>
+                  <p>{{from.name}}</p>
+                  <img src="http://graph.facebook.com/{{from.id}}/picture">
                   <p>{{message}}</p>
-                   <center><img class="image" src= {{picture}}></center>
                 </div>
               </div>
               {{/each}}
