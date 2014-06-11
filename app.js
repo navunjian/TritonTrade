@@ -32,6 +32,7 @@ dotenv.load();
 //route files to load
 var index = require('./routes/index');
 var home = require('./routes/home');
+var activity = require('./routes/activity')
 var buyers = require('./routes/buyers');
 var newpost = require('./routes/newpost');
 var sellers = require('./routes/sellers');
@@ -200,6 +201,7 @@ app.post('/home', home.view);
 app.post('/', index.view);
 // URLS that we can use in our html
 app.get('/', index.view);
+app.get('/activity', activity.view);
 app.get('/buyers', buyers.view);
 app.post('/buyers', buyers.view);
 app.get('/sellers', sellers.view);
