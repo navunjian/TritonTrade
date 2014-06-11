@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 /* custom css */
 
 .form-inline {
@@ -28,7 +30,14 @@ label {
 	color: #fff;
 }
 
-#facebook-login-btn {
+.app-name {
+	color: #fff;
+	font-family: 'Open Sans' sans-serif;
+	font-weight: 100;
+	letter-spacing: 3px;
+}
+
+#facebook-login-btn, .btn {
 	border-radius: 5px;
 	background-color: #66A2AE;
 	color: white;
@@ -43,6 +52,7 @@ label {
 Bottom Navigation Styles ============================== */
 .footer {
 	background: #f1f1f1;
+	background: #363739;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -52,7 +62,7 @@ Bottom Navigation Styles ============================== */
 	font-size: 10px;
 	text-align: center;
 	width: 100%;
-	color: #000;
+	color: #f1f1f1;
 }
 
 .nav-tabs > li {
@@ -79,13 +89,13 @@ BUYERS/SELLERS/FREE filter buttons =================== */
 
 #sell-btn {
 	border-radius: 5px;
-	background-color: #66A2AE;
+	background-color: #E9B163;
 	color: white;
 	border: none;
 	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: 1.5px;
 	padding: 0.7em 2em;
-	background-color: #c3b6d1;
+	background-color: #E9B163;
 }
 
 #free-btn {
@@ -152,7 +162,7 @@ Search bar ========================================== */
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
 	width: 100%;
-	border-top: 20px solid #c3b6d1;
+	border-top: 20px solid #E9B163;
 }
 
 .free-post {
@@ -172,3 +182,46 @@ Search bar ========================================== */
 	width: 50%;
 	text-align: center;
 }
+
+/*
+ACTIVITY PAGE STYLE ===================== */
+#activity-tabs {
+
+}
+
+#activity-tabs li {
+	border: none;
+	border-bottom: 6px solid gray;
+	width: 25%;
+
+}
+
+#activity-tabs li a {
+background: transparent;
+border:none;
+color: #fff;
+}
+
+#activity-tabs .active {
+	border-bottom: 6px solid #E9B163;
+}
+
+#activity-pane-content {
+	background: #fff;
+	padding: 2em;
+	height: 70%;
+}
+
+#activity-tabs .active a{
+	color: #f1f1f1;
+}
+
+.icon {
+	font-size: 32px;
+}
+
+.activity-post {
+	margin: 20px auto;
+}
+
+
