@@ -31,81 +31,58 @@
 </div> -->
 
 <body>
-  
+
 <div class="container">
-  <form role="form">
-  <div class="form-group">
-    <label for="title-input">Item Name/Title</label>
-    <input type="email" class="form-control" id="title-input">
-  </div>
+  <form role="form" action="/post_post" method="post">
+            <div class="form-group">
+              <label for="title">Item Name/Title</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="">
+            </div>
 
-  <div class="form-group">
-    <label for="tags-input">Tags</label>
-    <input type="email" class="form-control" id="tags-input" placeholder="i.e. #bed, #chemistry, #pickuponly, etc.">
-  </div>
+            <div class="form-group">
+              <label for="tags">Tags</label>
+              <input type="text" class="form-control" name="tags" id="tags" placeholder="i.e. #bed, #chemistry, #pickuponly, etc.">
+            </div>
 
-  <div class="row">
-    <div class="col-xs-4">
-      <div class="checkbox">
-        <label><input type="checkbox"> Buy</label>
-      </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="checkbox">
-        <label><input type="checkbox"> Sell</label>
-      </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="checkbox">
-        <label><input type="checkbox"> Free</label>
-      </div>
-    </div>
-  </div>
+            <label class="create_labels">What would you like to do with this item?</label>
+              <select id="itemaction" name="itemaction" required="required" data-name="Drop Down">
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+                <option value="free">Free</option>
+              </select>
 
-  <h4>Condition</h4>
-  <div class="row">
-    <div class="col-xs-6">
-      <div class="checkbox">
-        <label><input type="checkbox"> New</label>
-      </div>
-    </div>
-    <div class="col-xs-6">
-      <div class="checkbox">
-        <label><input type="checkbox"> Used</label>
-      </div>
-    </div>
-  </div>
-    
- 
+            <label class="create_labels">What's the condition of the item?</label>
+              <select id="condition" name="condition" required="required" data-name="Drop Down">
+                <option value="new">New</option>
+                <option value="likenew">Like New</option>
+                <option value="used">Used</option>
+              </select>
 
-  <h4>Price</h4>
-  <div class="row">
-    <div class="col-xs-7">
-      <div class="form-group">
-        <label for="title-input">Price $</label>
-        <input type="email" class="form-control" id="title-input">
-      </div>
-    </div>
-    <div class="col-xs-5" style="margin-top: 20px">
-      <div class="checkbox">
-        <label><input type="checkbox"> OBO</label>
-      </div>
-    </div>
-  </div>
+            <h4>Price</h4>
+            <div class="row">
+              <div class="col-xs-7">
+                <div class="form-group">
+                  <label for="price">Price $</label>
+                  <input type="text" name="price" class="form-control" id="price">
+                </div>
+              </div>
+              <div class="col-xs-5" style="margin-top: 20px">
+                <div class="checkbox">
+                  <label><input type="checkbox" id="bestoffer" name="bestoffer">OBO</label>
+                </div>
+              </div>
+            </div>
 
-
-
-
-  <div class="form-group">
-    <label for="exampleInputFile">Image</label>
-    <input type="file" id="exampleInputFile">
-  </div>
-  
-  <div class="form-group">
-    <label for="description-input">Description</label>
-    <textarea class="form-control" rows="3"></textarea>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+            <div class="form-group">
+              <label for="exampleInputFile">Image</label>
+              <input type="file" id="exampleInputFile" name="exampleInputFile">
+            </div>
+            
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default" value="newpost">Submit</button>
 </form>
 </div>
 

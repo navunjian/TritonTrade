@@ -1,0 +1,13 @@
+
+{
+  "posts": [
+    { "title": "IPHONE 5s",
+      "tags": "#shiny",
+      "itemaction": "buy",
+      "condition":"new",
+      "price":"$150",
+      "description":"da shiz"
+    }
+
+  ]
+}
