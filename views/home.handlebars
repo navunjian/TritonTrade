@@ -38,13 +38,13 @@
       <div class="row" style="vertical-alignment: center; text-alignment: center; margin-top: 100px;">
         <div class="col-md-4">
           <form action="/buyers">
-          <input id="buy-btn" type="submit" value="BUYERS">
+          <input id="buy-btn" type="submit" value="BUYING">
           </form>
         </div>
 
         <div class="col-md-4">
           <form action="/sellers" >
-            <input id="sell-btn" type="submit" value="SELLERS">
+            <input id="sell-btn" type="submit" value="SELLING">
           </form>
         </div>
       
@@ -60,17 +60,17 @@
     <script src="js/bootstrap.js"></script>
 
 </div>
-<div class="feed_bcg">
-    {{#each feed.data}}
-     <div class="feed_bcg2">
-         <br>
-         <img src="{{picture}}">
-                  {{message}} 
-         <br>
-     </div>
-    {{/each}}                   
-</div>
-    
+    <div class="feed_bcg">
+              {{#each this}}
+               <div class="free-post"> 
+                <div class="row">
+                  <p>{{from.name}}</p>
+                  <img class="image" src="http://graph.facebook.com/{{from.id}}/picture">
+                  <p>{{message}}</p>
+                </div> 
+              </div> 
+              {{/each}}
+    </div>
 <!-- Button trigger modal -->
 
 </body>

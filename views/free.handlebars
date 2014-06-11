@@ -36,7 +36,7 @@
 <div class="row">
   <div class="col-xs-4">
       <form action="/buyers">
-          <input id="buy-btn" type="submit" value="BUYERS">
+          <input id="buy-btn" type="submit" value="BUYING">
       </form>
   </div>
   <div class="col-xs-4">
@@ -55,8 +55,9 @@
               {{#each this}}
                <div class="free-post"> 
                 <div class="row">
+                  <p>{{from.name}}</p>
+                  <img class="image" src="http://graph.facebook.com/{{from.id}}/picture">
                   <p>{{message}}</p>
-                   <center><img class="image" src={{picture}}></center>
                 </div> 
               </div> 
               {{/each}}
