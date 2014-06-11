@@ -9,12 +9,12 @@
 }
 
 body {
-    /*background: url("../images/star_background.png") no-repeat center center fixed;*/ 
     /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;*/
     background-color: #414345;
+    background-color: #34495e;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -35,19 +35,31 @@ label {
 	font-family: 'Open Sans' sans-serif;
 	font-weight: 100;
 	letter-spacing: 3px;
+	font-size: 42px;
 }
 
-#facebook-login-btn, .btn {
+#facebook-login-btn  {
 	border-radius: 5px;
-	background-color: #66A2AE;
+	background-color: #3B5998 ;
 	color: white;
 	border: none;
 	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: 1.5px;
-	padding: 0.7em 2em;
+	padding: 1.2em 2em;
+	position: absolute;
+	vertical-align: center;
+	box-shadow: 3px 3px 3px #000;
+	margin: 0 auto;
+	margin-left: -110px;
 }
 
+.btn {
 
+}
+
+#landingpage {
+
+}
 /*
 Bottom Navigation Styles ============================== */
 .footer {
@@ -69,6 +81,7 @@ Bottom Navigation Styles ============================== */
 	width: 20%;
 	border-top: 1px solid black;
 }
+
 
 .fa {
 	font-size: 22px;

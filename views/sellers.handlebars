@@ -15,6 +15,7 @@
     <![endif]-->        
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+       <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 
 <body>
@@ -58,13 +59,27 @@
 
   <div class="feed_bcg">
               {{#each this}}
-              <div class="sell-post">
+              <div class="sell-post" data-toggle="modal" data-target=".bs-example-modal-lg">
                 <div class="row">
-                  <p>{{name}}</>
                   <p>{{message}}</p>
                    <center><img class="image" src= {{picture}}></center>
                 </div>
               </div>
+              <!-- Open post in modal -->
+              <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <img class="image" src= {{picture}}>
+                    </div>
+                    <div class="col-xs-9">
+                      <p>{{message}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
               {{/each}}
   </div>
 
@@ -77,6 +92,10 @@
             <p> {{itemaction}} </p>
       {{/each}}
   </div>
+
+<!-- Large modal -->
+
+
 
   
     <script src="https://code.jquery.com/jquery.js"></script>
